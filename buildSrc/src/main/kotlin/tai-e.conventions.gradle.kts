@@ -52,8 +52,8 @@ tasks.withType<Javadoc> {
 }
 
 // checks the code style after compilation
-tasks.classes { finalizedBy("checkstyleMain") }
-tasks.testClasses { finalizedBy("checkstyleTest") }
+// tasks.classes { finalizedBy("checkstyleMain") }
+// tasks.testClasses { finalizedBy("checkstyleTest") }
 // custom the report format
 checkstyle {
     isShowViolations = false

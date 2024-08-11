@@ -31,9 +31,13 @@ public class ReflectionTest {
 
     private static final String DIR = "reflection";
 
-    @Test
-    void testBasic() {
-        Tests.testPTA(DIR, "GetMember");
+    @ParameterizedTest
+    @ValueSource(strings = {
+            "GetMember",
+            "ListToArrayAsArg"
+    })
+    void testBasic(String mainClass) {
+        Tests.testPTA(DIR, mainClass);
     }
 
     @Test
@@ -48,6 +52,7 @@ public class ReflectionTest {
      */
     @ParameterizedTest
     @ValueSource(strings = {
+            "ListToArrayAsArg",
             "LazyHeapModeling",
             "ArgsRefine",
             "GetMethods",

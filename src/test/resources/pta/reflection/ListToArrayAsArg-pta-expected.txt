@@ -1,0 +1,50 @@
+Points-to sets of all variables
+[]:<ListToArrayAsArg: void main(java.lang.String[])>/$r0 -> [[]:NewObj{<ListToArrayAsArg: void main(java.lang.String[])>[2@L9] newarray java.lang.Class[%intconst0]}]
+[]:<ListToArrayAsArg: void main(java.lang.String[])>/$r1 -> [[]:ConstantObj{java.lang.Class: ListToArrayAsArg.class}]
+[]:<ListToArrayAsArg: void main(java.lang.String[])>/$r2 -> [[]:ReflectionMetaObj{alloc=<ListToArrayAsArg: void foo(java.lang.String[])>,type=java.lang.reflect.Method}]
+[]:<ListToArrayAsArg: void main(java.lang.String[])>/$r3 -> [[]:NewObj{<ListToArrayAsArg: void main(java.lang.String[])>[8@L10] new java.util.ArrayList}]
+[]:<ListToArrayAsArg: void main(java.lang.String[])>/$r4 -> [[]:NewObj{<ListToArrayAsArg: void main(java.lang.String[])>[12@L12] newarray java.lang.Object[%intconst0]}]
+[]:<ListToArrayAsArg: void main(java.lang.String[])>/$r5 -> [[]:NewObj{<ListToArrayAsArg: void main(java.lang.String[])>[13@L12] newarray java.lang.String[%intconst1]}]
+[]:<ListToArrayAsArg: void main(java.lang.String[])>/$r6 -> []
+[]:<ListToArrayAsArg: void main(java.lang.String[])>/$r7 -> [[]:NewObj{<ListToArrayAsArg: void main(java.lang.String[])>[17@L13] newarray java.lang.String[%intconst0]}]
+[]:<ListToArrayAsArg: void main(java.lang.String[])>/%classconst2 -> [[]:ConstantObj{java.lang.Class: java.lang.String[].class}]
+[]:<ListToArrayAsArg: void main(java.lang.String[])>/%stringconst3 -> [[]:ConstantObj{java.lang.String: "foo"}]
+[]:<ListToArrayAsArg: void main(java.lang.String[])>/%stringconst4, expected: [[]:ConstantObj{java.lang.String: "foo"}], given: [[]:ConstantObj{java.lang.String: "hello"}]
+[]:<ListToArrayAsArg: void main(java.lang.String[])>/%stringconst5, expected: [[]:ConstantObj{java.lang.String: "hello"}], given: [[]:ConstantObj{java.lang.String: "<ListToArrayAsArg: void foo(java.lang.String[])>"}]
+[]:<ListToArrayAsArg: void main(java.lang.String[])>/r8 -> [[]:EntryPointObj{alloc=MethodParam{<ListToArrayAsArg: void main(java.lang.String[])>/0},type=java.lang.String[] in <ListToArrayAsArg: void main(java.lang.String[])>}]
+[]:NewObj{<ListToArrayAsArg: void main(java.lang.String[])>[12@L12] newarray java.lang.Object[%intconst0]}[*] -> []
+[]:NewObj{<ListToArrayAsArg: void main(java.lang.String[])>[17@L13] newarray java.lang.String[%intconst0]}[*] -> [[]:ConstantObj{java.lang.String: "<ListToArrayAsArg: void foo(java.lang.String[])>"}]
+[]:NewObj{<ListToArrayAsArg: void main(java.lang.String[])>[2@L9] newarray java.lang.Class[%intconst0]}[*] -> [[]:ConstantObj{java.lang.Class: java.lang.String[].class}]
+[]:<ListToArrayAsArg: java.lang.Class class$(java.lang.String)>/name, expected: [[]:ConstantObj{java.lang.String: "ListToArrayAsArg"}, []:ConstantObj{java.lang.String: "[Ljava.lang.String;"}], given: null
+[]:<ListToArrayAsArg: java.lang.Class class$(java.lang.String)>/temp$0, expected: [[]:ConstantObj{java.lang.Class: ListToArrayAsArg.class}], given: null
+[]:<ListToArrayAsArg: java.lang.Class class$(java.lang.String)>/temp$1, expected: [[]:MergedObj{<Merged java.lang.NoClassDefFoundError>}], given: null
+[]:<ListToArrayAsArg: void foo(java.lang.String[])>/args, expected: [], given: null
+[]:<ListToArrayAsArg: void main(java.lang.String[])>/%stringconst0, expected: [[]:ConstantObj{java.lang.String: "ListToArrayAsArg"}], given: null
+[]:<ListToArrayAsArg: void main(java.lang.String[])>/%stringconst2, expected: [[]:ConstantObj{java.lang.String: "[Ljava.lang.String;"}], given: null
+[]:<ListToArrayAsArg: void main(java.lang.String[])>/%stringconst6, expected: [[]:ConstantObj{java.lang.String: "<ListToArrayAsArg: void foo(java.lang.String[])>"}], given: null
+[]:<ListToArrayAsArg: void main(java.lang.String[])>/args, expected: [[]:EntryPointObj{alloc=MethodParam{<ListToArrayAsArg: void main(java.lang.String[])>/0},type=java.lang.String[] in <ListToArrayAsArg: void main(java.lang.String[])>}], given: null
+[]:<ListToArrayAsArg: void main(java.lang.String[])>/list, expected: [[]:NewObj{<ListToArrayAsArg: void main(java.lang.String[])>[27@L10] new java.util.ArrayList}], given: null
+[]:<ListToArrayAsArg: void main(java.lang.String[])>/m, expected: [[]:ReflectionMetaObj{alloc=<ListToArrayAsArg: void foo(java.lang.String[])>,type=java.lang.reflect.Method}], given: null
+[]:<ListToArrayAsArg: void main(java.lang.String[])>/temp$0, expected: [[]:ConstantObj{java.lang.Class: ListToArrayAsArg.class}], given: null
+[]:<ListToArrayAsArg: void main(java.lang.String[])>/temp$1, expected: [[]:ConstantObj{java.lang.Class: ListToArrayAsArg.class}], given: null
+[]:<ListToArrayAsArg: void main(java.lang.String[])>/temp$10, expected: [[]:NewObj{<ListToArrayAsArg: void main(java.lang.String[])>[32@L12] newarray java.lang.Object[%intconst1]}], given: null
+[]:<ListToArrayAsArg: void main(java.lang.String[])>/temp$11, expected: [[]:NewObj{<ListToArrayAsArg: void main(java.lang.String[])>[33@L12] newarray java.lang.String[%intconst3]}], given: null
+[]:<ListToArrayAsArg: void main(java.lang.String[])>/temp$12, expected: [], given: null
+[]:<ListToArrayAsArg: void main(java.lang.String[])>/temp$13, expected: [], given: null
+[]:<ListToArrayAsArg: void main(java.lang.String[])>/temp$15, expected: [[]:NewObj{<ListToArrayAsArg: void main(java.lang.String[])>[38@L13] newarray java.lang.String[%intconst1]}], given: null
+[]:<ListToArrayAsArg: void main(java.lang.String[])>/temp$2, expected: [[]:ConstantObj{java.lang.Class: ListToArrayAsArg.class}], given: null
+[]:<ListToArrayAsArg: void main(java.lang.String[])>/temp$3, expected: [[]:NewObj{<ListToArrayAsArg: void main(java.lang.String[])>[11@L9] newarray java.lang.Class[%intconst1]}], given: null
+[]:<ListToArrayAsArg: void main(java.lang.String[])>/temp$4, expected: [[]:ConstantObj{java.lang.Class: ListToArrayAsArg.class}], given: null
+[]:<ListToArrayAsArg: void main(java.lang.String[])>/temp$5, expected: [[]:ConstantObj{java.lang.Class: ListToArrayAsArg.class}], given: null
+[]:<ListToArrayAsArg: void main(java.lang.String[])>/temp$6, expected: [[]:ConstantObj{java.lang.Class: ListToArrayAsArg.class}], given: null
+[]:<ListToArrayAsArg: void main(java.lang.String[])>/temp$7, expected: [[]:ReflectionMetaObj{alloc=<ListToArrayAsArg: void foo(java.lang.String[])>,type=java.lang.reflect.Method}], given: null
+[]:<ListToArrayAsArg: void main(java.lang.String[])>/temp$8, expected: [[]:NewObj{<ListToArrayAsArg: void main(java.lang.String[])>[27@L10] new java.util.ArrayList}], given: null
+<ListToArrayAsArg: java.lang.Class array$Ljava$lang$String>, expected: [[]:ConstantObj{java.lang.Class: ListToArrayAsArg.class}], given: null
+<ListToArrayAsArg: java.lang.Class class$ListToArrayAsArg>, expected: [[]:ConstantObj{java.lang.Class: ListToArrayAsArg.class}], given: null
+[]:NewObj{<ListToArrayAsArg: void main(java.lang.String[])>[11@L9] newarray java.lang.Class[%intconst1]}[*], expected: [[]:ConstantObj{java.lang.Class: ListToArrayAsArg.class}], given: null
+[]:NewObj{<ListToArrayAsArg: void main(java.lang.String[])>[32@L12] newarray java.lang.Object[%intconst1]}[*], expected: [], given: null
+[]:NewObj{<ListToArrayAsArg: void main(java.lang.String[])>[38@L13] newarray java.lang.String[%intconst1]}[*], expected: [[]:ConstantObj{java.lang.String: "<ListToArrayAsArg: void foo(java.lang.String[])>"}], given: null
+[]:<ListToArrayAsArg: void main(java.lang.String[])>/%nullconst -> []
+[]:<ListToArrayAsArg: void main(java.lang.String[])>/%stringconst4 -> [[]:ConstantObj{java.lang.String: "hello"}]
+[]:<ListToArrayAsArg: void main(java.lang.String[])>/%stringconst5 -> [[]:ConstantObj{java.lang.String: "<ListToArrayAsArg: void foo(java.lang.String[])>"}]
+[]:EntryPointObj{alloc=MethodParam{<ListToArrayAsArg: void main(java.lang.String[])>/0},type=java.lang.String[] in <ListToArrayAsArg: void main(java.lang.String[])>}[*] -> [[]:EntryPointObj{alloc=MethodParam{<ListToArrayAsArg: void main(java.lang.String[])>/0}[*],type=java.lang.String in <ListToArrayAsArg: void main(java.lang.String[])>}]

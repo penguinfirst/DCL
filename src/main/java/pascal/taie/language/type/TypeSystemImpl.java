@@ -177,6 +177,18 @@ public class TypeSystemImpl implements TypeSystem {
             return supertype instanceof ReferenceType;
         } else if (subtype instanceof ClassType) {
             if (supertype instanceof ClassType) {
+                // DCL-Modified
+                boolean isSuper = ((ClassType) supertype).getJClass() == null;
+                boolean isSub = ((ClassType) subtype).getJClass() == null;
+
+                if (isSuper || isSub) {
+                    System.err.println("super type : " + supertype.getName() + " | "
+                            + "super class : " + ((isSuper) ? "null" : supertype.getName()) + " | "
+                            + "super type : " + subtype.getName() + " | "
+                            + "super class : " + ((isSub) ? "null" : subtype.getName()) + " | ");
+                    return false;
+                }
+
                 return hierarchy.isSubclass(
                         ((ClassType) supertype).getJClass(),
                         ((ClassType) subtype).getJClass());
@@ -196,6 +208,18 @@ public class TypeSystemImpl implements TypeSystem {
                         return true;
                     } else if (superBase instanceof ClassType &&
                             subBase instanceof ClassType) {
+                        // DCL-Modified
+                        boolean isSuper = ((ClassType) superBase).getJClass() == null;
+                        boolean isSub = ((ClassType) subBase).getJClass() == null;
+
+                        if (isSuper || isSub) {
+                            System.err.println("super type : " + superBase.getName() + " | "
+                                    + "super class : " + ((isSuper) ? "null" : superBase.getName()) + " | "
+                                    + "sub type : " + subBase.getName() + " | "
+                                    + "sub class : " + ((isSub) ? "null" : subBase.getName()) + " | ");
+                            return false;
+                        }
+
                         return hierarchy.isSubclass(
                                 ((ClassType) superBase).getJClass(),
                                 ((ClassType) subBase).getJClass());

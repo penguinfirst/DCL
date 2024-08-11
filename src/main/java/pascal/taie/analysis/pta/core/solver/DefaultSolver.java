@@ -373,7 +373,9 @@ public class DefaultSolver implements Solver {
             Var fromVar = store.getRValue();
             if (propTypes.isAllowed(fromVar)) {
                 CSVar from = csManager.getCSVar(context, fromVar);
-                JField field = store.getFieldRef().resolve();
+                JField field = store.getFieldRef().resolveNullable();
+                if (field == null)
+                    continue;
                 pts.forEach(baseObj -> {
                     if (baseObj.getObject().isFunctional()) {
                         InstanceField instField = csManager.getInstanceField(baseObj, field);
@@ -397,7 +399,8 @@ public class DefaultSolver implements Solver {
             Var toVar = load.getLValue();
             if (propTypes.isAllowed(toVar)) {
                 CSVar to = csManager.getCSVar(context, toVar);
-                JField field = load.getFieldRef().resolve();
+                JField field = load.getFieldRef().resolveNullable();
+                if (field == null) continue;
                 pts.forEach(baseObj -> {
                     if (baseObj.getObject().isFunctional()) {
                         InstanceField instField = csManager.getInstanceField(baseObj, field);
@@ -701,7 +704,8 @@ public class DefaultSolver implements Solver {
             @Override
             public Void visit(LoadField stmt) {
                 if (stmt.isStatic() && propTypes.isAllowed(stmt.getRValue())) {
-                    JField field = stmt.getFieldRef().resolve();
+                    JField field = stmt.getFieldRef().resolveNullable();
+                    if (field == null) return null;
                     StaticField sfield = csManager.getStaticField(field);
                     CSVar to = csManager.getCSVar(context, stmt.getLValue());
                     addPFGEdge(sfield, to, FlowKind.STATIC_LOAD);
@@ -715,7 +719,8 @@ public class DefaultSolver implements Solver {
             @Override
             public Void visit(StoreField stmt) {
                 if (stmt.isStatic() && propTypes.isAllowed(stmt.getRValue())) {
-                    JField field = stmt.getFieldRef().resolve();
+                    JField field = stmt.getFieldRef().resolveNullable();
+                    if (field == null) return null;
                     StaticField sfield = csManager.getStaticField(field);
                     CSVar from = csManager.getCSVar(context, stmt.getRValue());
                     addPFGEdge(from, sfield, FlowKind.STATIC_STORE);

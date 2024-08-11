@@ -40,6 +40,9 @@ import pascal.taie.analysis.pta.plugin.Plugin;
 import pascal.taie.analysis.pta.plugin.ReferenceHandler;
 import pascal.taie.analysis.pta.plugin.ResultProcessor;
 import pascal.taie.analysis.pta.plugin.ThreadHandler;
+import pascal.taie.analysis.pta.plugin.dcl.DCLAnalysis;
+import pascal.taie.analysis.pta.plugin.dcl.DCLEntryHandler;
+import pascal.taie.analysis.pta.plugin.dcl.DCLExperimentStats;
 import pascal.taie.analysis.pta.plugin.exception.ExceptionAnalysis;
 import pascal.taie.analysis.pta.plugin.invokedynamic.InvokeDynamicAnalysis;
 import pascal.taie.analysis.pta.plugin.invokedynamic.Java9StringConcatHandler;
@@ -132,6 +135,10 @@ public class PointerAnalysis extends ProgramAnalysis<PointerAnalysisResult> {
                 new NativeModeller(),
                 new ExceptionAnalysis()
         );
+
+        // DCL Analysis
+        plugin.addPlugin(new DCLAnalysis());
+
         int javaVersion = World.get().getOptions().getJavaVersion();
         if (javaVersion < 9) {
             // current reference handler doesn't support Java 9+

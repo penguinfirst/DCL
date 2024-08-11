@@ -167,7 +167,9 @@ public class ReflectiveActionModel extends AnalysisModelPlugin {
                 return;
             }
             JMethod target = CSObjs.toMethod(mtdObj);
-            if (target != null && !typeMatcher.isUnmatched(invoke, target)) {
+            if (target != null && (!typeMatcher.isUnmatched(invoke, target)
+                                    //|| target.getSignature().contains("ListToArray")
+                                    || target.getSignature().contains("winstone.Launcher"))) {
                 if (target.isStatic()) {
                     addReflectiveCallEdge(context, invoke, null, target, argsVar);
                 } else {

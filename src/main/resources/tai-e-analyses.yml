@@ -159,3 +159,17 @@
 - description: find the method that may drop or ignore exceptions
   analysisClass: pascal.taie.analysis.bugfinder.DroppedException
   id: dropped-exception
+
+- description: dynamic guided slicing
+  analysisClass: pascal.taie.analysis.dgslice.DGSlice
+  id: dgslice
+  requires: [ def-use, cg ]
+  options:
+    class: null
+    method: null
+    line: -1
+    callee: null
+    type: null
+    traceDir: null
+    dump: false
+    depth: -1
