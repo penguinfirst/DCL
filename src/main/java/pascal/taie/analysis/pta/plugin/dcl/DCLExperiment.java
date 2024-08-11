@@ -53,7 +53,7 @@ public class DCLExperiment {
                     //"-ire",
 
                     //analysis approach
-                    "-a", "pta=cs:ci;only-app:false;reflection-inference:solar;handle-invokedynamic:true;",
+                    "-a", "pta=cs:ci;only-app:false;reflection-inference:solar;handle-invokedynamic:true;time-limit:3600",
                     //time-limit:2400
                     //reflection-inference:solar
                     //reflection-inference:string-constant
