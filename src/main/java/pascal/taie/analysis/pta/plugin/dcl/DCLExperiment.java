@@ -53,13 +53,13 @@ public class DCLExperiment {
                     //"-ire",
 
                     //analysis approach
-                    "-a", "pta=cs:ci;only-app:false;reflection-inference:solar;handle-invokedynamic:true;time-limit:3600",
+                    "-a", "pta=cs:ci;only-app:false;reflection-inference:solar;handle-invokedynamic:true;",
                     //time-limit:2400
                     //reflection-inference:solar
                     //reflection-inference:string-constant
                     //handle-invokedynamic:true
 
-                    //"-a", "cg=dump-methods:true;dump-call-edges:true",
+                    "-a", "cg=dump-methods:true;dump-call-edges:true",
                     //"-a", "icfg=dump:true",
                     //"-a", "ir-dumper",
                     //"-a", "pta=cs:ci;only-app:false;dump-ci:false;dump-yaml:false;reflection-log:" + refLog,
