@@ -35,7 +35,7 @@ public class DCLModel extends AnalysisModelPlugin {
                         solver.addVarPointsTo(context, invoke.getResult(), csClassObj);
                         System.err.println("WebApp Model: " + cName + " has been returned");
                     } else {
-                        System.err.println("Warning: " + cName + " not found!");
+                        System.err.println("WebApp Model Warning: " + cName + " not found!");
                     }
                 }
             }
@@ -54,7 +54,7 @@ public class DCLModel extends AnalysisModelPlugin {
                     CSObj csObj = csManager.getCSObj(context, obj);
                     solver.addVarPointsTo(context, invoke.getResult(), csObj);
                 } else {
-                    System.err.println("Warning: " + name + " not found!");
+                    System.err.println("WebApp Model Warning: " + name + " not found!");
                 }
             }
         }
