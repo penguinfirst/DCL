@@ -6,7 +6,7 @@ import java.util.List;
 public class DCLExperiment {
 
     public static void main(String[] args) {
-        DCLExperimentStats.init(1, true, false, "/home/zcx/DCL-Benchmark/");
+        DCLExperimentStats.init(1, true, false);
 
         startTaie(args);
     }

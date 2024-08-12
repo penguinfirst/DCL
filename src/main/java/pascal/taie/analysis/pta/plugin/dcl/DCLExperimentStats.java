@@ -30,11 +30,11 @@ public class DCLExperimentStats {
 
 
     /* -------------- Project Info -------------- */
-    public static void init(int projectID, boolean isLinux, boolean isApp, String benchPath) {
+    public static void init(int projectID, boolean isLinux, boolean isApp) {
         DCLExperimentStats.projectID = projectID;
         DCLExperimentStats.isLinux = isLinux;
         DCLExperimentStats.isApp = isApp;
-        DCLExperimentStats.benchPath = benchPath;
+        DCLExperimentStats.benchPath = readBench();
 
         DCLExperimentStats.SEP = (isLinux) ? ":" : ";";
         switch(projectID) {
@@ -47,6 +47,15 @@ public class DCLExperimentStats {
         DCLExperimentStats.mainClassName = readMainClass(cpPrefix + "info/main.txt");
         DCLExperimentStats.inputEntries = readEntries(cpPrefix + "info/entries.txt");
         DCLExperimentStats.inputClasses = readInputClasses(cpPrefix + "info/input-classes.txt");
+    }
+
+    public static String readBench() {
+        try {
+            FileInputStream f = new FileInputStream("BenchInfo.txt");
+            return new Scanner(f).nextLine();
+        } catch (Exception e) {
+            throw new RuntimeException("BenchInfo cannot be read!");
+        }
     }
 
     /* --------------- Class Path --------------- */

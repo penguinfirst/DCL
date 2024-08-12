@@ -33,6 +33,7 @@ public class DCLModel extends AnalysisModelPlugin {
                         Obj classObj = heapModel.getConstantObj(classLiteral);
                         CSObj csClassObj = csManager.getCSObj(context, classObj);
                         solver.addVarPointsTo(context, invoke.getResult(), csClassObj);
+                        System.err.println("WebApp Model: " + cName + " has been returned");
                     } else {
                         System.err.println("Warning: " + cName + " not found!");
                     }
