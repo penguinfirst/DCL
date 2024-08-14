@@ -8,4 +8,4 @@ cache/
 out/
 output/
 BenchInfo.txt
-ExecLogs.txt
+ExecLogs*.txt
